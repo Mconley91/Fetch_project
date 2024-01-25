@@ -7,9 +7,10 @@
         <title>Github Profile Requester</title>
         <link rel="stylesheet" href="styles.css">
         <script src="scripts.js" defer></script>
+        <script src="node_modules/dayjs/dayjs.min.js"></script>
     </head>
     <body onload="startTime()">
-        <h1 id="title">Lookup Some* Github Profile</h1>
+        <h1 id="title">Lookup Some* Github Profiles</h1>
         <div id="top-container">
             <div class="container" id="search-container">
                 <form>
@@ -23,6 +24,7 @@
             </div>
         </div>
         <div id="clock-outter">
+            <div id="date"></div>
             <div id="clock-inner">
             </div>
         </div>
