@@ -20,4 +20,17 @@ fetch('https://api.github.com/users')
 })
 .catch(console.log("ERROR: something went wrong"));
 
-document.getElementById("clock-inner").innerHTML = moment().format('MMMM Do YYYY, h:mm:ss a');
+function startTime() {
+    const today = new Date();
+    let h = today.getHours();
+    let m = today.getMinutes();
+    let s = today.getSeconds();
+    m = checkTime(m);
+    s = checkTime(s);
+    document.getElementById("clock-inner").innerHTML = 'The Time Is: ' + h + ":" + m + ":" + s;
+    setTimeout(startTime, 1000);
+  }
+  function checkTime(i) {
+    if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+    return i;
+  }
