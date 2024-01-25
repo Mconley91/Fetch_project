@@ -18,4 +18,6 @@ fetch('https://api.github.com/users')
         }
     }
 })
-.catch(console.log("ERROR: something went wrong"))
+.catch(console.log("ERROR: something went wrong"));
+
+document.getElementById("clock-inner").innerHTML = moment().format('MMMM Do YYYY, h:mm:ss a');
